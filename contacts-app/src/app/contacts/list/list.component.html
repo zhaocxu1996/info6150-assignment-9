@@ -1,0 +1,44 @@
+<div class="nav">
+  <div class="nav-span">Todo Resources</div>
+  <div class="add">
+      <button (click)="add()" class="add-btn">Add Todo</button>
+  </div>
+</div>
+<!-- <div class="title-bar">
+  <span class="id">id</span>
+  <span class="title">title</span>
+  <span class="completed">completed</span>
+</div> -->
+<!-- <div class="contact-item" *ngFor="let contact of contacts">
+  <span>{{contact.id}}</span>&nbsp;
+  <span>{{contact.title}}</span>&nbsp;
+  <button (click)="viewDetail(contact)">View detail</button>
+</div> -->
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th class="th">Id</th>
+        <th class="th">Title</th>
+        <th class="th">Completed</th>
+        <th class="th">View</th>
+        <th class="th">Mark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{contact.id}}</td>
+        <td>{{contact.title}}</td>
+        <td>
+          <input type="checkbox" [(ngModel)]="contact.completed">
+        </td>
+        <td>
+          <button (click)="viewDetail(contact)">View detail</button>
+        </td>
+        <td>
+          <button (click)="complete(contact)">Complete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

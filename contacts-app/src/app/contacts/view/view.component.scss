@@ -1,0 +1,73 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(75px, 400px);
+  height: 50px;
+  margin: auto;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  .nav-span {
+    grid-column: 1;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .add {
+    padding: 5px;
+    grid-column: 2;
+    text-align: right;
+    .add-btn {
+      font-size: 15px;
+      width: 100px;
+      height: 40px;
+      border: 0;
+      border-radius: 20px;
+      background-color: rgb(1, 199, 199);
+      color: white;
+    }
+  }
+}
+.form {
+  width: 480px;
+  font-size: 20px;
+}
+
+.fieldset {
+  border: 0;
+}
+
+.title, .date, .time {
+  height: 22px;
+  font-size: 18px;
+}
+
+.title {
+  width: 330px;
+}
+
+.description {
+  height: 70px;
+  font-size: 18px;
+  width: 377px;
+}
+
+.date {
+  width: 170px;
+}
+
+.time {
+  width: 120px;
+}
+
+.submit {
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+.submit-btn {
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  border-radius: 20px;
+  background-color: rgb(1, 199, 199);
+  color: white;
+}

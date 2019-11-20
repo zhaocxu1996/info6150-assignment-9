@@ -1,0 +1,53 @@
+<div *ngIf="id<0" class="nav">
+  <div class="nav-span">Create new todo</div>
+  <div class="add">
+    <button (click)="index()" class="add-btn">Index</button>
+  </div>
+  <div class="form">
+      <form (ngSubmit)="saveTodo()">
+          <fieldset class="fieldset">
+              <label>Title: </label>
+              <input type="text" name="title" [(ngModel)]="contact.title" class="title">
+          </fieldset>
+          <fieldset class="fieldset">
+              <label>Description: </label><br/>
+              <!-- <input type="text" name="description" [(ngModel)]="contact.description"><br/> -->
+              <textarea name="description" [(ngModel)]="contact.description" class="description"></textarea><br/>
+          </fieldset>
+          <fieldset class="fieldset">
+              <label>Due date: </label>
+              <input type="date" name="date" [(ngModel)]="date" class="date" required>
+              <!-- <label> time: </label> -->
+              <input type="time" name="time" [(ngModel)]="time" class="time" required><br/>
+          </fieldset>
+          <div class="submit">
+              <button type="submit" class="submit-btn">Save</button>
+          </div>
+        </form>
+  </div>
+</div>
+<div *ngIf="id>=0" class="nav">
+    <div class="nav-span">Detail of todo {{id}}</div>
+    <div class="add">
+      <button (click)="index()" class="add-btn">Index</button>
+    </div>
+    <div class="contact-item" *ngFor="let c of contact">
+      <table>
+        <tr>
+          <td>Title: </td>
+          <td>{{c.title}}</td>
+        </tr>
+        <tr>
+          <td>Description: </td>
+          <td>{{c.description}}</td>
+        </tr>
+        <tr>
+          <td>Due date: </td>
+          <td>{{c.due_date}}</td>
+        </tr>
+      </table>
+        <!-- <h2>Todo: {{c.title}}</h2>
+        <p>description: {{c.description}}</p>
+        <p>due date: {{c.due_date}}</p> -->
+    </div>
+</div>

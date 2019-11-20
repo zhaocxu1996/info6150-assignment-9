@@ -1,9 +1,6 @@
-# TodoApp
+# ContactsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
-User can see all todo items on fetch page and click a todo item to see its detailed information.
-User can add a new todo item by clicking the add button and add a todo item by entering the title, description, due date and time.
-User can mark a todo item.
 
 ## Development server
 
